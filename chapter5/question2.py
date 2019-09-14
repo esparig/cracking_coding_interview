@@ -20,5 +20,5 @@ def print_bin(num: float):
     else:
         print("."+"".join(binary_repr))
         
-#print_bin(0.5625)
+print_bin(0.5625)
 print_bin(0.9999999999)
