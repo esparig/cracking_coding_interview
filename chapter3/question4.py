@@ -1,4 +1,6 @@
 """Queue via Stacks: Implement a MyQueue class which implements a queue using two stacks.
+- Time Complexity: enqueue, O(n), dequeue, O(1)
+- Space Complexity: O(n)
 """
 class QueueUsingStacks:
     def __init__(self):
