@@ -1,5 +1,6 @@
 """Route Between Nodes: Given a directed graph, design an algorithm to find out whether there is a
 route between two nodes.
+BFS finds the shortest path when there is one.
 - Time complexity: O(k^d)
 - Space complexity: O(n)
 """
