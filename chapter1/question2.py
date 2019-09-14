@@ -30,6 +30,13 @@ def is_permutation_less_space(str1: str, str2: str) -> bool:
         count_chars[c] -= 1
     return True
 
+def is_permutation_sorting(str1: str, str2: str) -> bool:
+    """
+    - Time complexity: O(n log n)
+    - Space complexity: O(1)
+    """
+    return all(a == b for a, b in zip(sorted(list(str1)), sorted(list(str2))))
+
 import unittest
 
 class Test(unittest.TestCase):
@@ -40,3 +47,7 @@ class Test(unittest.TestCase):
     def test_solution2(self):
         self.assertTrue(is_permutation_less_space("abc", "bca"))
         self.assertFalse(is_permutation_less_space("abc", "baa"))
+        
+    def test_solution3(self):
+        self.assertTrue(is_permutation_sorting("abc", "bca"))
+        self.assertFalse(is_permutation_sorting("abc", "baa"))
