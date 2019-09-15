@@ -1,4 +1,6 @@
 """Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.
+- Time complexity: O(n)
+- Space complexity: O(1)
 """
 class Node:
     def __init__(self, value: int, next: 'Node'):
