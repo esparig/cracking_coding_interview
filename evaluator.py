@@ -3,7 +3,7 @@ from typing import List, Tuple, Any, Callable
 class Operator:
     def __init__(self, symbol:str):
         self.symbol = symbol
-        self.precedence, self.behavior = self.create_operator(symbol)
+        self.precedence, self.behavior = self.create_behavior(symbol)
     
     def __str__(self):
         return self.symbol
@@ -29,7 +29,7 @@ class Operator:
     def subs(self, op1: int, op2: int ) -> int:
         return op1 - op2
     
-    def create_operator(self, symbol: str) -> Tuple[int, Callable]:
+    def create_behavior(self, symbol: str) -> Tuple[int, Callable]:
         if symbol == '*':
             return 4, self.mult
         if symbol == '/':
