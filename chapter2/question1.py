@@ -8,6 +8,8 @@ How would you solve this problem if a temporary buffer is not allowed?
 - Time complexity: O(n)
 - Space complexity: O(n)
 """
+from typing import List, Any
+
 class Node:
     def __init__(self, value: int, next: 'Node'):
         self.value = value
@@ -21,7 +23,7 @@ class Node:
             node = node.next
         return " -> ".join(values)
 
-def create_linked_list(values):
+def create_linked_list(values: List[Any]) -> Node:
     if len(values) > 0:
         return Node(values[0], create_linked_list(values[1:]))
     return None
